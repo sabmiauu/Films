@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Film;
 
 class HomeController extends Controller
 {
     function index(Request $req) {
-        return view('home.index');
+        $films = Film::all();
+        return view('home.index', ['films' => $films]);
     }
 }
