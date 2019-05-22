@@ -9,7 +9,8 @@
 
   <ul>
       @foreach($films as $item)
-        <li>{{ $item->name }}</li>
+        <!--<li>{{ $item->name }}</li>-->
+        <li>@include('films.partials.film-with-video', ['film' => $item])</li>
       @endforeach
   </ul>
 
